@@ -1,0 +1,14 @@
+# coding: utf-8
+
+
+def int2str(arg):
+    if type(arg) is int:
+        arg = str(arg)
+    else:
+        pass
+    return arg
+
+
+def f_str2int(arg):
+    result = int(float(arg)) if arg else None
+    return result
