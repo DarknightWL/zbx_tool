@@ -1,4 +1,4 @@
-# zbx_tool
+# zabbix_tool
 - 工具刚刚完成，还没有经过测试
 ## 工具用途：
 - 根据excel文件的格式生成zabbix标准模板的命令行工具。
