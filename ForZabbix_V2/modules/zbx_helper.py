@@ -135,7 +135,7 @@ class CreateTemplatesZone(object):
             values = self.sheet_obj.get_row_values(i, 7)
             if values[0] == '中间件':
                 continue
-            elif values.count('') == 7:
+            elif list(filter(lambda x: x, values)) == []:
                 continue
             values[0], service_type = (service_type, service_type) if not values[0] else (values[0], values[0])
             values[1], used_templates = (used_templates, used_templates) if not values[1] else (values[1], values[1])
