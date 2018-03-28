@@ -69,9 +69,10 @@ class CreateHostsZone(object):
             temp[0], group_name = (group_name, group_name) if not temp[0] else (temp[0], temp[0])
             temp[-2], service_type = (service_type, service_type) if not temp[-2] else (temp[-2], temp[-2])
             temp[-1], used_template = (used_template, used_template) if not temp[-1] else (temp[-1], temp[-1])
-
-            if hosts_values_dict.get(temp[1], None) is None:
-                hosts_values_dict[temp[1]] = temp
+            key_temp = temp[1] + temp[3]
+            
+            if hosts_values_dict.get(key_temp, None) is None:
+                hosts_values_dict[key_temp] = temp
         return hosts_values_dict
 
     @staticmethod
